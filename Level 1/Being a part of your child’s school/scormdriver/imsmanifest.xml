@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<manifest identifier="H4EiLcbfngwKVgxE0Mf2OCMu--PAh-xkzYx6w8ZM" version="1"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <adlcp:location>metadata.xml</adlcp:location>
+  </metadata>
+  <organizations default="articulate_rise">
+      <organization identifier="articulate_rise">
+      <title>Being a part of your child’s school</title>
+      <item identifier="i1" identifierref="r1" isvisible="true">
+        <title>Being a part of your child’s school</title>
+        <adlcp:datafromlms>eyJjcHYiOiJ6WXg2dzhaTSJ9</adlcp:datafromlms>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="r1" type="webcontent" adlcp:scormtype="sco" href="scormdriver/indexAPI.html">
+      <!-- SCORMDRIVER STUFF -->
+      <file href="scormdriver/LICENSE.txt" />
+      <file href="scormdriver/indexAPI.html" />
+      <file href="scormdriver/preloadIntegrity.js" />
+      <file href="scormdriver/driverOptions.js" />
+      <file href="scormdriver/AICCComm.html" />
+      <file href="scormdriver/auto-scripts/AutoBookmark.js" />
+      <file href="scormdriver/auto-scripts/AutoCompleteSCO.js" />
+      <file href="scormdriver/auto-scripts/CourseExit.js" />
+      <file href="scormdriver/blank.html" />
+      <file href="scormdriver/goodbye.html" />
+      <file href="scormdriver/scormdriver.js" />
+      <file href="scormdriver/browsersniff.js" />
+
+      <!-- RUNTIME COMMON STUFF -->
+      <file href="scormcontent/index.html" />
+      <file href="scormcontent/lib/main.bundle.js"/>
+
+      
+        <file href="scormcontent/lib/fonts/icomoon.ttf"/>
+        <file href="scormcontent/lib/fonts/icomoon.woff"/>
+
+        <file href="scormcontent/lib/icomoon.css"/>
+        <file href="scormcontent/lib/main.bundle.css"/>
+        <file href="scormcontent/lib/player-0.0.11.min.js"/>
+        <file href="scormcontent/lib/lzwcompress.js"/>
+      
+
+      <!-- RUNTIME CONTENT STUFF -->
+      <file href="scormcontent/lib/fonts/Roboto-Light.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Regular.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Bold.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Italic.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Black.woff" />
+<file href="scormcontent/lib/fonts/Lato-Light.woff" />
+<file href="scormcontent/lib/fonts/Lato-Regular.woff" />
+<file href="scormcontent/lib/fonts/Lato-Bold.woff" />
+<file href="scormcontent/lib/fonts/Lato-Italic.woff" />
+<file href="scormcontent/lib/fonts/Lato-Black.woff" />
+<file href="scormcontent/assets/kegp0xZ9uLs9cmRF_small.png" />
+<file href="scormcontent/assets/vtMk77h_o_stnxWe_small.png" />
+<file href="scormcontent/assets/LM3ahiwYSKoG2T7M_transcoded-UsXkas8zvmFETfJe-1.mp3" />
+<file href="scormcontent/assets/-4PrJEeqA5REydvB_transcoded--y_q837rFmxh42Wo-1.mp3" />
+<file href="scormcontent/assets/QwhoWQIhTVZQu0yU_qyr9zMmj2eov1lsg.jpg" />
+<file href="scormcontent/assets/Is_kF6yDrm7WOZL2_pF2rMnltL4odwSXe.jpg" />
+<file href="scormcontent/assets/MCHDzueAaFPK_TSp_2zAEMDOeqUTZ-UUq.jpg" />
+<file href="scormcontent/assets/r3uzLBDwU2zwT4Dj_DJEVZiRvcdXWofew.jpg" />
+<file href="scormcontent/assets/8phHMWEpp_gkSyXX_GW6o_GZ75twkhXak.jpg" />
+<file href="scormcontent/assets/oUWyU4Ncy8Fbnh2N_Wdrvf2pGLTLVNYgE.jpg" />
+<file href="scormcontent/assets/KvZb1zUs2UImAyHZ_b-fRZ8tPqefeqxnk.jpg" />
+<file href="scormcontent/assets/gMyxNhc5fp1KoDHu_K6EysQ3c_j6mtoEN.jpg" />
+<file href="scormcontent/assets/OGDvFnNmQpLrdbUT_kl8cmsyTELxYlfjJ.jpg" />
+<file href="scormcontent/assets/x7YE3OrlcHN7oRev_YQ-XzEhRsRwyuUDA.jpg" />
+<file href="scormcontent/assets/QG9e1b-SBOMWTmhE_GScEtVrwW9K_Wln0.jpg" />
+<file href="scormcontent/assets/y0Hu374V_t4Kmwxd_1lsaXudY_byD92w-.jpg" />
+<file href="scormcontent/assets/5OlAvfawMbVRUrpe_f7vX0whe3MdpCq6o.jpg" />
+<file href="scormcontent/assets/irgZSFpWVmPRTVpJ_oXN5Nxt52m5Wwoa5.jpg" />
+<file href="scormcontent/assets/6LzfC5WZ9PW7nbTH_transcoded-pNDRxEO0mhsElQ3m-1.mp3" />
+<file href="scormcontent/assets/tqOpzGgkpZQaU3Bl_rWt35n5crzHb9pNM.jpg" />
+<file href="scormcontent/assets/WFYwsiciXdbpag3l_Bs3FmgERv3QgKhNh.jpg" />
+<file href="scormcontent/assets/rmXc642gn8E7pkfg_W3XpoN95YT7cIDGN.jpg" />
+<file href="scormcontent/assets/Gx5B-whu2st-T3XF_kUQ6t7JtqBkU2x5j.jpg" />
+<file href="scormcontent/assets/ZCvp5LbH8wcjIamN_pgi0pFz7rZHrc9Ma.jpg" />
+<file href="scormcontent/assets/uEH_KN9f7fPInGvH_CigJobwqZZaP9FYv.jpg" />
+
+    </resource>
+  </resources>
+</manifest>
