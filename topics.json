@@ -283,6 +283,10 @@
       "Housing",
       "Law"
     ],
+    "Returning goods": [
+      "Shopping",
+      "Law"
+    ],
     "Road signs": [
       "Transport",
       "Law"
@@ -291,12 +295,35 @@
       "Money",
       "Housing"
     ],
+    "Saving water and energy": [
+      "Housing",
+      "Money"
+    ],
+    "School days": [
+      "Education"
+    ],
     "School messages": [
+      "Education"
+    ],
+    "School reports and notices": [
       "Education"
     ],
     "Sending a letter and an email": [
       "Community",
       "Study English"
+    ],
+    "Shopping and recycling": [
+      "Shopping",
+      "Community"
+    ],
+    "Starting to look": [
+      "Work"
+    ],
+    "Stolen goods": [
+      "Law"
+    ],
+    "Symptoms and illnesses": [
+      "Health"
     ],
     "Talking about money": [
       "Money"
@@ -308,12 +335,31 @@
       "Education",
       "Study English"
     ],
+    "The Beach": [
+      "Leisure",
+      "Health"
+    ],
     "The Police": [
       "Law",
       "Community"
     ],
+    "The community": [
+      "Community"
+    ],
+    "The police in Australia": [
+      "Law",
+      "Community"
+    ],
+    "The school system": [
+      "Education"
+    ],
     "Tickets": [
       "Transport",
+      "Money"
+    ],
+    "Traffic and parking fines": [
+      "Transport",
+      "Law",
       "Money"
     ],
     "Transport types and signs": [
@@ -321,6 +367,12 @@
     ],
     "Types of housing": [
       "Housing"
+    ],
+    "Using public transport": [
+      "Transport"
+    ],
+    "Using resources": [
+      "Study English"
     ],
     "Weather forecasts": [
       "Community"
