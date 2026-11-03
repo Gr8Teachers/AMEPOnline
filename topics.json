@@ -368,14 +368,25 @@
     "Places to shop": [
       "Shopping"
     ],
+    "Planning and booking holidays": [
+      "Leisure",
+      "Transport"
+    ],
     "Pollution": [
       "Community"
     ],
     "Practising English": [
       "Study English"
     ],
+    "Pre-employment courses": [
+      "Work",
+      "Education"
+    ],
     "Preparing for school": [
       "Education"
+    ],
+    "Preparing for work": [
+      "Work"
     ],
     "Real estate agents and inspections": [
       "Housing"
@@ -384,6 +395,10 @@
       "Community",
       "Housing"
     ],
+    "Renting or buying": [
+      "Housing",
+      "Money"
+    ],
     "Repairs and tenants’ rights": [
       "Housing",
       "Law"
@@ -391,6 +406,10 @@
     "Returning goods": [
       "Shopping",
       "Law"
+    ],
+    "Rights and responsibilities": [
+      "Law",
+      "Community"
     ],
     "Road signs": [
       "Transport",
@@ -421,14 +440,25 @@
       "Shopping",
       "Community"
     ],
+    "Speaking skills": [
+      "Study English"
+    ],
     "Starting to look": [
       "Housing"
     ],
     "Stolen goods": [
       "Law"
     ],
+    "Study skills": [
+      "Study English",
+      "Education"
+    ],
     "Symptoms and illnesses": [
       "Health"
+    ],
+    "TAFE and community courses": [
+      "Education",
+      "Study English"
     ],
     "Talking about money": [
       "Money"
@@ -451,6 +481,17 @@
     "The community": [
       "Community"
     ],
+    "The courts": [
+      "Law"
+    ],
+    "The housing market": [
+      "Housing",
+      "Money"
+    ],
+    "The police": [
+      "Law",
+      "Community"
+    ],
     "The police in Australia": [
       "Law",
       "Community"
@@ -470,6 +511,9 @@
     "Transport types and signs": [
       "Transport"
     ],
+    "Treatments": [
+      "Health"
+    ],
     "Types of housing": [
       "Housing"
     ],
@@ -478,6 +522,10 @@
     ],
     "Using resources": [
       "Study English"
+    ],
+    "Ways of communicating": [
+      "Study English",
+      "Community"
     ],
     "Weather forecasts": [
       "Community"
@@ -488,6 +536,10 @@
     ],
     "Where do you come from": [
       "Personal Info"
+    ],
+    "Work life balance": [
+      "Work",
+      "Health"
     ],
     "Working together": [
       "Work",
