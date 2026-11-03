@@ -15,6 +15,12 @@
     "Work"
   ],
   "units": {
+    "A fragile environment": [
+      "Community"
+    ],
+    "A job interview": [
+      "Work"
+    ],
     "A party": [
       "Community",
       "Leisure"
@@ -26,9 +32,20 @@
     "Address": [
       "Personal Info"
     ],
+    "Air travel": [
+      "Transport",
+      "Leisure"
+    ],
+    "An accident at school": [
+      "Education",
+      "Health"
+    ],
     "Answering the phone": [
       "Personal Info",
       "Community"
+    ],
+    "Applying for a job": [
+      "Work"
     ],
     "Applying for a permit": [
       "Law",
@@ -62,6 +79,9 @@
       "Money",
       "Law"
     ],
+    "Budgeting": [
+      "Money"
+    ],
     "Buying things": [
       "Shopping",
       "Money"
@@ -73,22 +93,71 @@
       "Personal Info",
       "Housing"
     ],
+    "Conversation skills": [
+      "Study English",
+      "Community"
+    ],
+    "Crime prevention": [
+      "Law",
+      "Community"
+    ],
+    "Day trips and holidays": [
+      "Leisure",
+      "Transport"
+    ],
+    "Describing jobs": [
+      "Work"
+    ],
     "Directions": [
       "Transport",
       "Community"
     ],
+    "Discounts and bargains": [
+      "Shopping",
+      "Money"
+    ],
+    "Doctors and hospitals": [
+      "Health"
+    ],
+    "Driving and road safety": [
+      "Transport",
+      "Law"
+    ],
     "Driving lessons": [
       "Transport"
+    ],
+    "Emails and text messages": [
+      "Community",
+      "Study English"
     ],
     "Enrolling your child": [
       "Education",
       "Personal Info"
+    ],
+    "Events": [
+      "Leisure",
+      "Community"
     ],
     "Exercise and wellbeing": [
       "Health"
     ],
     "Finding a job": [
       "Work"
+    ],
+    "Finding information": [
+      "Study English",
+      "Community"
+    ],
+    "First aid and emergency calls": [
+      "Health"
+    ],
+    "Following and giving directions": [
+      "Transport",
+      "Community"
+    ],
+    "Future plans": [
+      "Personal Info",
+      "Study English"
     ],
     "Going out": [
       "Leisure",
@@ -97,12 +166,19 @@
     "Good food diet": [
       "Health"
     ],
+    "Good neighbours": [
+      "Community",
+      "Housing"
+    ],
     "Group activities": [
       "Community",
       "Leisure"
     ],
     "Hello, what's your name": [
       "Personal Info"
+    ],
+    "Houses and flats": [
+      "Housing"
     ],
     "How children learn": [
       "Education"
@@ -121,6 +197,9 @@
       "Community",
       "Leisure"
     ],
+    "Issues in public transport": [
+      "Transport"
+    ],
     "Job descriptions": [
       "Work"
     ],
@@ -134,6 +213,12 @@
     "Law and you": [
       "Law"
     ],
+    "Learning strategies": [
+      "Study English"
+    ],
+    "Legal aid and courts": [
+      "Law"
+    ],
     "Likes and dislikes": [
       "Personal Info",
       "Leisure"
@@ -141,15 +226,38 @@
     "Looking for a place to live": [
       "Housing"
     ],
+    "Looking for work": [
+      "Work"
+    ],
+    "Making an appointment": [
+      "Health",
+      "Community"
+    ],
     "Making friends": [
       "Community",
       "Personal Info"
     ],
+    "Managing money": [
+      "Money"
+    ],
+    "Medicine labels": [
+      "Health"
+    ],
     "Numbers and dates": [
       "Study English"
     ],
+    "Parent teacher interviews": [
+      "Education"
+    ],
+    "Payment methods": [
+      "Money",
+      "Shopping"
+    ],
     "People": [
       "Personal Info",
+      "Community"
+    ],
+    "Places": [
       "Community"
     ],
     "Practising English": [
