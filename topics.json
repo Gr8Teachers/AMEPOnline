@@ -5,6 +5,7 @@
     "Personal Info",
     "Community",
     "Education",
+    "Environment",
     "Health",
     "Housing",
     "Law",
@@ -16,6 +17,7 @@
   ],
   "units": {
     "A fragile environment": [
+      "Environment",
       "Community"
     ],
     "A job interview": [
@@ -110,6 +112,7 @@
       "Housing"
     ],
     "Climate change": [
+      "Environment",
       "Community"
     ],
     "Communication breakdown": [
@@ -187,6 +190,7 @@
       "Leisure"
     ],
     "Extreme weather": [
+      "Environment",
       "Community"
     ],
     "Finding a job": [
@@ -211,6 +215,7 @@
       "Community"
     ],
     "Global challenges": [
+      "Environment",
       "Community"
     ],
     "Going out": [
@@ -376,6 +381,7 @@
       "Transport"
     ],
     "Pollution": [
+      "Environment",
       "Community"
     ],
     "Practising English": [
@@ -395,6 +401,7 @@
       "Housing"
     ],
     "Recycling": [
+      "Environment",
       "Community",
       "Housing"
     ],
@@ -419,10 +426,12 @@
       "Law"
     ],
     "Saving power and money": [
+      "Environment",
       "Money",
       "Housing"
     ],
     "Saving water and energy": [
+      "Environment",
       "Housing",
       "Money"
     ],
@@ -440,8 +449,8 @@
       "Study English"
     ],
     "Shopping and recycling": [
-      "Shopping",
-      "Community"
+      "Environment",
+      "Shopping"
     ],
     "Speaking skills": [
       "Study English"
