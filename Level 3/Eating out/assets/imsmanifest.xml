@@ -1,0 +1,76 @@
+<?xml version="1.0" ?>
+<manifest identifier="GerVlL3gwv1lLN2-5j-dSH_uzP3cmErNtFaKgSON" version="1"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <adlcp:location>metadata.xml</adlcp:location>
+  </metadata>
+  <organizations default="articulate_rise">
+      <organization identifier="articulate_rise">
+      <title>Eating out</title>
+      <item identifier="i1" identifierref="r1" isvisible="true">
+        <title>Eating out</title>
+        <adlcp:datafromlms>eyJjcHYiOiJ0RmFLZ1NPTiJ9</adlcp:datafromlms>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="r1" type="webcontent" adlcp:scormtype="sco" href="scormdriver/indexAPI.html">
+      <!-- SCORMDRIVER STUFF -->
+      <file href="scormdriver/LICENSE.txt" />
+      <file href="scormdriver/indexAPI.html" />
+      <file href="scormdriver/preloadIntegrity.js" />
+      <file href="scormdriver/driverOptions.js" />
+      <file href="scormdriver/AICCComm.html" />
+      <file href="scormdriver/auto-scripts/AutoBookmark.js" />
+      <file href="scormdriver/auto-scripts/AutoCompleteSCO.js" />
+      <file href="scormdriver/auto-scripts/CourseExit.js" />
+      <file href="scormdriver/blank.html" />
+      <file href="scormdriver/goodbye.html" />
+      <file href="scormdriver/scormdriver.js" />
+      <file href="scormdriver/browsersniff.js" />
+
+      <!-- RUNTIME COMMON STUFF -->
+      <file href="scormcontent/index.html" />
+      <file href="scormcontent/lib/main.bundle.js"/>
+
+      
+        <file href="scormcontent/lib/fonts/icomoon.ttf"/>
+        <file href="scormcontent/lib/fonts/icomoon.woff"/>
+
+        <file href="scormcontent/lib/icomoon.css"/>
+        <file href="scormcontent/lib/main.bundle.css"/>
+        <file href="scormcontent/lib/player-0.0.11.min.js"/>
+        <file href="scormcontent/lib/lzwcompress.js"/>
+      
+
+      <!-- RUNTIME CONTENT STUFF -->
+      <file href="scormcontent/lib/fonts/Roboto-Light.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Regular.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Bold.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Italic.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Black.woff" />
+<file href="scormcontent/lib/fonts/Lato-Light.woff" />
+<file href="scormcontent/lib/fonts/Lato-Regular.woff" />
+<file href="scormcontent/lib/fonts/Lato-Bold.woff" />
+<file href="scormcontent/lib/fonts/Lato-Italic.woff" />
+<file href="scormcontent/lib/fonts/Lato-Black.woff" />
+<file href="scormcontent/assets/6ZspvMCWLve_0O_j_small.png" />
+<file href="scormcontent/assets/oNIBnSokB0DNwd8G_small.png" />
+<file href="scormcontent/assets/Y_Ac1J3eJSbVhW50_small_1508216876.jpg" />
+<file href="scormcontent/assets/7VmU7_XYF9nkeZ7P_H7i7nexeW62lJDFJ.jpg" />
+<file href="scormcontent/assets/1B1-7SH5jjl-kGMf_j48lYfgcKuGjoE2N.jpg" />
+<file href="scormcontent/assets/IQvt4KR_cRH3VKom_transcoded-muJ5JE-8-VuSkdPv-3.mp3" />
+<file href="scormcontent/assets/Y9_8qaKmLMA7JViF_6NXobYOqZykRRCdq.jpg" />
+<file href="scormcontent/assets/50H0pZRgPwFVdTSO_vhnDkS1ArXFJPfXu.jpg" />
+<file href="scormcontent/assets/jxhziTgJhssGyE6K_transcoded-uvZgGhSux6sdfjDg-3.mp3" />
+
+    </resource>
+  </resources>
+</manifest>
