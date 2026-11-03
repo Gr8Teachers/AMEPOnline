@@ -19,6 +19,19 @@
   li a { display:block; height:100%; background:var(--card); border:1px solid var(--line); border-radius:10px; padding:14px 18px; color:var(--text); text-decoration:none; font-weight:600; }
   li a:hover, li a:focus { border-color:var(--accent); color:var(--accent); }
   .msg { color:var(--muted); }
+  details.level { background:var(--card); border:1px solid var(--line); border-radius:12px; margin-bottom:12px; }
+  details.level > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:12px; padding:16px 20px; font-size:1.15rem; font-weight:700; }
+  details.level > summary::-webkit-details-marker { display:none; }
+  details.level > summary::before { content:""; width:8px; height:8px; border-right:2px solid var(--muted); border-bottom:2px solid var(--muted); transform:rotate(-45deg); transition:transform .15s; flex:none; }
+  details.level[open] > summary::before { transform:rotate(45deg); }
+  details.level > summary:hover { color:var(--accent); }
+  details.level > summary:focus-visible { outline:2px solid var(--accent); outline-offset:2px; border-radius:12px; }
+  .count { margin-left:auto; font-size:.85rem; font-weight:500; color:var(--muted); }
+  .body { padding:0 20px 18px; }
+  .body li a { background:var(--bg); }
+  .open-page { display:inline-block; margin-top:12px; font-size:.9rem; color:var(--accent); }
+  .tools { display:flex; gap:16px; margin:-20px 0 16px; font-size:.9rem; }
+  .tools button { background:none; border:0; padding:0; color:var(--accent); cursor:pointer; font:inherit; }
 </style>
 </head>
 <body>
@@ -77,26 +90,61 @@
       list.innerHTML = "";
       if (!names.length) { list.appendChild(el("p", { "class": "msg" }, "No units yet.")); return; }
 
-      names.forEach(function (level) {
-        var base = thisLevel ? "" : enc(level) + "/";
-        var sec = el("section", {});
-        var h2 = el("h2", {});
-        if (thisLevel) h2.textContent = "Units";
-        else h2.appendChild(el("a", { href: base }, level));
-        sec.appendChild(h2);
-        if (!levels[level].length) {
-          sec.appendChild(el("p", { "class": "msg" }, "No units yet."));
-          list.appendChild(sec);
-          return;
-        }
+      function unitList(level, base) {
+        var units = levels[level];
+        if (!units.length) return el("p", { "class": "msg" }, "No units yet.");
         var ul = el("ul", {});
-        levels[level].sort(collator.compare).forEach(function (unit) {
+        units.sort(collator.compare).forEach(function (unit) {
           var li = el("li", {});
           li.appendChild(el("a", { href: base + enc(unit) + "/" }, unit));
           ul.appendChild(li);
         });
-        sec.appendChild(ul);
+        return ul;
+      }
+
+      // Level page: plain list of its units
+      if (thisLevel) {
+        var sec = el("section", {});
+        sec.appendChild(el("h2", {}, "Units"));
+        sec.appendChild(unitList(thisLevel, ""));
         list.appendChild(sec);
+        return;
+      }
+
+      // Home page: each level is a collapsible panel (closed by default)
+      var KEY = "amep-open-levels", openSet = {};
+      try { (JSON.parse(localStorage.getItem(KEY)) || []).forEach(function (n) { openSet[n] = 1; }); } catch (e) {}
+      function save() {
+        try {
+          var open = [];
+          list.querySelectorAll("details.level[open]").forEach(function (d) { open.push(d.dataset.level); });
+          localStorage.setItem(KEY, JSON.stringify(open));
+        } catch (e) {}
+      }
+
+      var tools = el("div", { "class": "tools" });
+      var expand = el("button", { type: "button" }, "Expand all");
+      var collapse = el("button", { type: "button" }, "Collapse all");
+      expand.onclick = function () { list.querySelectorAll("details.level").forEach(function (d) { d.open = true; }); save(); };
+      collapse.onclick = function () { list.querySelectorAll("details.level").forEach(function (d) { d.open = false; }); save(); };
+      tools.appendChild(expand); tools.appendChild(collapse);
+      list.appendChild(tools);
+
+      names.forEach(function (level) {
+        var base = enc(level) + "/";
+        var n = levels[level].length;
+        var d = el("details", { "class": "level" });
+        d.dataset.level = level;
+        if (openSet[level]) d.open = true;
+        var s = el("summary", {}, level);
+        s.appendChild(el("span", { "class": "count" }, n === 1 ? "1 unit" : n + " units"));
+        d.appendChild(s);
+        var body = el("div", { "class": "body" });
+        body.appendChild(unitList(level, base));
+        body.appendChild(el("a", { "class": "open-page", href: base }, "Open " + level + " page →"));
+        d.appendChild(body);
+        d.addEventListener("toggle", save);
+        list.appendChild(d);
       });
     })
     .catch(function () {
