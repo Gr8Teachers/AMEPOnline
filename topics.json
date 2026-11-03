@@ -1,0 +1,201 @@
+{
+  "_how_to_edit": "List each unit's settlement topics. Topics must match a name in 'topics'. Units missing here still show; they just aren't in any topic filter.",
+  "topics": [
+    "Study English",
+    "Personal Info",
+    "Community",
+    "Education",
+    "Health",
+    "Housing",
+    "Law",
+    "Leisure",
+    "Money",
+    "Shopping",
+    "Transport",
+    "Work"
+  ],
+  "units": {
+    "A party": [
+      "Community",
+      "Leisure"
+    ],
+    "A speeding ticket": [
+      "Transport",
+      "Law"
+    ],
+    "Address": [
+      "Personal Info"
+    ],
+    "Answering the phone": [
+      "Personal Info",
+      "Community"
+    ],
+    "Applying for a permit": [
+      "Law",
+      "Community"
+    ],
+    "At the doctor's": [
+      "Health"
+    ],
+    "At the post office": [
+      "Community"
+    ],
+    "At the shops": [
+      "Shopping",
+      "Money"
+    ],
+    "At work": [
+      "Work"
+    ],
+    "Australia": [
+      "Community"
+    ],
+    "Being a part of your child’s school": [
+      "Education"
+    ],
+    "Bills": [
+      "Money",
+      "Housing"
+    ],
+    "Bonds and leases": [
+      "Housing",
+      "Money",
+      "Law"
+    ],
+    "Buying things": [
+      "Shopping",
+      "Money"
+    ],
+    "Calling about repairs": [
+      "Housing"
+    ],
+    "Change of address": [
+      "Personal Info",
+      "Housing"
+    ],
+    "Directions": [
+      "Transport",
+      "Community"
+    ],
+    "Driving lessons": [
+      "Transport"
+    ],
+    "Enrolling your child": [
+      "Education",
+      "Personal Info"
+    ],
+    "Exercise and wellbeing": [
+      "Health"
+    ],
+    "Finding a job": [
+      "Work"
+    ],
+    "Going out": [
+      "Leisure",
+      "Community"
+    ],
+    "Good food diet": [
+      "Health"
+    ],
+    "Group activities": [
+      "Community",
+      "Leisure"
+    ],
+    "Hello, what's your name": [
+      "Personal Info"
+    ],
+    "How children learn": [
+      "Education"
+    ],
+    "How do you feel": [
+      "Health",
+      "Personal Info"
+    ],
+    "How we get jobs": [
+      "Work"
+    ],
+    "Illness and medicine": [
+      "Health"
+    ],
+    "Invitations": [
+      "Community",
+      "Leisure"
+    ],
+    "Job descriptions": [
+      "Work"
+    ],
+    "Job search tips": [
+      "Work"
+    ],
+    "Joining a library": [
+      "Community",
+      "Study English"
+    ],
+    "Law and you": [
+      "Law"
+    ],
+    "Likes and dislikes": [
+      "Personal Info",
+      "Leisure"
+    ],
+    "Looking for a place to live": [
+      "Housing"
+    ],
+    "Numbers and dates": [
+      "Study English"
+    ],
+    "People": [
+      "Personal Info",
+      "Community"
+    ],
+    "Practising English": [
+      "Study English"
+    ],
+    "Preparing for school": [
+      "Education"
+    ],
+    "Recycling": [
+      "Community",
+      "Housing"
+    ],
+    "Road signs": [
+      "Transport",
+      "Law"
+    ],
+    "Saving power and money": [
+      "Money",
+      "Housing"
+    ],
+    "School messages": [
+      "Education"
+    ],
+    "Sending a letter and an email": [
+      "Community",
+      "Study English"
+    ],
+    "Talking about money": [
+      "Money"
+    ],
+    "Talking about weather": [
+      "Community"
+    ],
+    "Talking to the teacher": [
+      "Education",
+      "Study English"
+    ],
+    "The Police": [
+      "Law",
+      "Community"
+    ],
+    "Tickets": [
+      "Transport",
+      "Money"
+    ],
+    "Transport types and signs": [
+      "Transport"
+    ],
+    "Types of housing": [
+      "Housing"
+    ]
+  }
+}

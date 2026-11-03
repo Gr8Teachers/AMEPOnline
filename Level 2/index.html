@@ -30,8 +30,24 @@
   .body { padding:0 20px 18px; }
   .body li a { background:var(--bg); }
   .open-page { display:inline-block; margin-top:12px; font-size:.9rem; color:var(--accent); }
-  .tools { display:flex; gap:16px; margin:-20px 0 16px; font-size:.9rem; }
+  .tools { display:flex; gap:16px; margin:0 0 12px; font-size:.9rem; }
   .tools button { background:none; border:0; padding:0; color:var(--accent); cursor:pointer; font:inherit; }
+  .filters { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px 20px; margin:0 0 20px; }
+  .filters-head { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:12px; }
+  .filters-head h3 { margin:0; font-size:1rem; }
+  .search { margin-left:auto; flex:0 1 280px; min-width:180px; padding:8px 12px; border:1px solid var(--line); border-radius:8px; font:inherit; background:var(--bg); color:var(--text); }
+  .search:focus { outline:2px solid var(--accent); outline-offset:1px; }
+  .chips { display:flex; flex-wrap:wrap; gap:8px; }
+  .chip { border:1px solid var(--line); background:var(--bg); color:var(--text); border-radius:999px; padding:6px 14px; font:inherit; font-size:.9rem; cursor:pointer; }
+  .chip:hover { border-color:var(--accent); color:var(--accent); }
+  .chip[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  .chip .n { opacity:.7; margin-left:4px; font-size:.8rem; }
+  .result { margin:0 0 14px; color:var(--muted); font-size:.9rem; }
+  .result:empty { display:none; }
+  .result button { background:none; border:0; padding:0; margin-left:8px; color:var(--accent); cursor:pointer; font:inherit; }
+  .tags { display:block; margin-top:4px; font-size:.78rem; font-weight:500; color:var(--muted); }
+  li.hidden { display:none; }
+  details.level.empty { display:none; }
 </style>
 </head>
 <body>
@@ -69,9 +85,23 @@
     return e;
   }
 
-  fetch("https://api.github.com/repos/" + OWNER + "/" + REPO + "/git/trees/" + BRANCH + "?recursive=1")
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (data) {
+  var ROOT = thisLevel ? "../" : "";
+  var norm = function (s) { return (s || "").normalize("NFC"); };
+  var TOPICS = [], UNIT_TOPICS = {};
+
+  var topicsReq = fetch(ROOT + "topics.json", { cache: "no-cache" })
+    .then(function (r) { return r.ok ? r.json() : {}; })
+    .catch(function () { return {}; });
+
+  Promise.all([
+    fetch("https://api.github.com/repos/" + OWNER + "/" + REPO + "/git/trees/" + BRANCH + "?recursive=1")
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }),
+    topicsReq
+  ])
+    .then(function (res) {
+      var data = res[0], t = res[1] || {};
+      TOPICS = t.topics || [];
+      Object.keys(t.units || {}).forEach(function (k) { UNIT_TOPICS[norm(k)] = t.units[k]; });
       // Units are folders of the form "<Level>/<Unit>/index.html"
       var levels = {};
       data.tree.forEach(function (item) {
@@ -95,26 +125,103 @@
         if (!units.length) return el("p", { "class": "msg" }, "No units yet.");
         var ul = el("ul", {});
         units.sort(collator.compare).forEach(function (unit) {
+          var tags = UNIT_TOPICS[norm(unit)] || [];
           var li = el("li", {});
-          li.appendChild(el("a", { href: base + enc(unit) + "/" }, unit));
+          li.dataset.name = unit.toLowerCase();
+          li.dataset.topics = tags.join("|");
+          var a = el("a", { href: base + enc(unit) + "/" }, unit);
+          if (tags.length) a.appendChild(el("span", { "class": "tags" }, tags.join(" · ")));
+          li.appendChild(a);
           ul.appendChild(li);
         });
         return ul;
       }
 
+      // ---- Settlement topic filters + search ----
+      var state = { topic: "", q: "" };
+      try {
+        var h = decodeURIComponent(location.hash.replace(/^#/, ""));
+        var m = h.match(/^topic=(.+)$/);
+        if (m && TOPICS.indexOf(m[1]) >= 0) state.topic = m[1];
+      } catch (e) {}
+
+      var allUnits = [];
+      names.forEach(function (l) { levels[l].forEach(function (u) { allUnits.push(u); }); });
+      function countFor(topic) {
+        return allUnits.filter(function (u) { return (UNIT_TOPICS[norm(u)] || []).indexOf(topic) >= 0; }).length;
+      }
+
+      var filters = el("div", { "class": "filters" });
+      var head = el("div", { "class": "filters-head" });
+      head.appendChild(el("h3", {}, "Settlement topics"));
+      var search = el("input", { "class": "search", type: "search", placeholder: "Search units…", "aria-label": "Search units" });
+      head.appendChild(search);
+      filters.appendChild(head);
+      var chips = el("div", { "class": "chips", role: "group", "aria-label": "Settlement topics" });
+      var chipEls = [];
+      function addChip(label, value, n) {
+        var b = el("button", { type: "button", "class": "chip", "aria-pressed": "false" }, label);
+        if (n != null) b.appendChild(el("span", { "class": "n" }, n));
+        b.dataset.value = value;
+        b.onclick = function () { state.topic = (state.topic === value) ? "" : value; apply(); };
+        chips.appendChild(b); chipEls.push(b);
+      }
+      addChip("All topics", "", null);
+      TOPICS.forEach(function (tp) { var n = countFor(tp); if (n) addChip(tp, tp, n); });
+      filters.appendChild(chips);
+      var result = el("p", { "class": "result", "aria-live": "polite" });
+
+      if (TOPICS.length) { list.appendChild(filters); }
+      list.appendChild(result);
+      search.addEventListener("input", function () { state.q = search.value.trim().toLowerCase(); apply(); });
+
+      function apply() {
+        var active = !!(state.topic || state.q);
+        chipEls.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.value === state.topic)); });
+        try { history.replaceState(null, "", state.topic ? "#topic=" + encodeURIComponent(state.topic) : location.pathname + location.search); } catch (e) {}
+        var shown = 0;
+        list.querySelectorAll("li[data-name]").forEach(function (li) {
+          var ok = (!state.topic || li.dataset.topics.split("|").indexOf(state.topic) >= 0) &&
+                   (!state.q || li.dataset.name.indexOf(state.q) >= 0);
+          li.classList.toggle("hidden", !ok);
+          if (ok) shown++;
+        });
+        list.querySelectorAll("details.level").forEach(function (d) {
+          var total = d.querySelectorAll("li[data-name]").length;
+          var vis = d.querySelectorAll("li[data-name]:not(.hidden)").length;
+          d.classList.toggle("empty", active && vis === 0);
+          d.querySelector(".count").textContent = active ? vis + " of " + total : (total === 1 ? "1 unit" : total + " units");
+          if (active) d.open = vis > 0; else d.open = !!openSet[d.dataset.level];
+        });
+        var tools = list.querySelector(".tools"); if (tools) tools.style.display = active ? "none" : "";
+        result.textContent = "";
+        if (active) {
+          result.textContent = shown === 0 ? "No units match." : (shown === 1 ? "1 unit" : shown + " units") +
+            (state.topic ? " in " + state.topic : "") + (state.q ? " matching “" + search.value.trim() + "”" : "");
+          var clr = el("button", { type: "button" }, "Clear filters");
+          clr.onclick = function () { state.topic = ""; state.q = ""; search.value = ""; apply(); };
+          result.appendChild(clr);
+        }
+      }
+
       // Level page: plain list of its units
+      var openSet = {};
       if (thisLevel) {
         var sec = el("section", {});
         sec.appendChild(el("h2", {}, "Units"));
         sec.appendChild(unitList(thisLevel, ""));
         list.appendChild(sec);
+        apply();
         return;
       }
 
       // Home page: each level is a collapsible panel (closed by default)
-      var KEY = "amep-open-levels", openSet = {};
+      var KEY = "amep-open-levels";
       try { (JSON.parse(localStorage.getItem(KEY)) || []).forEach(function (n) { openSet[n] = 1; }); } catch (e) {}
       function save() {
+        if (state.topic || state.q) return; // don't remember panels opened by a filter
+        openSet = {};
+        list.querySelectorAll("details.level[open]").forEach(function (d) { openSet[d.dataset.level] = 1; });
         try {
           var open = [];
           list.querySelectorAll("details.level[open]").forEach(function (d) { open.push(d.dataset.level); });
@@ -146,6 +253,7 @@
         d.addEventListener("toggle", save);
         list.appendChild(d);
       });
+      apply();
     })
     .catch(function () {
       list.innerHTML = '<p class="msg">Couldn’t load the unit list right now. Please refresh in a minute.</p>';
