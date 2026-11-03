@@ -206,6 +206,14 @@
     ],
     "Where do you come from": [
       "Personal Info"
+    ],
+    "Working together": [
+      "Work",
+      "Community"
+    ],
+    "Your job": [
+      "Work",
+      "Personal Info"
     ]
   }
 }
