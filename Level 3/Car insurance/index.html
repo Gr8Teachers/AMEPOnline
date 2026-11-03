@@ -484,5 +484,14 @@ root.Runtime = {
     
       <script src="lib/main.bundle.js"></script>
     
-  </body>
+  <!-- AMEP: exit button goes to main page -->
+<script>
+document.addEventListener("click", function (e) {
+  var t = e.target && e.target.closest && e.target.closest(".courseExit");
+  if (!t) return;
+  e.preventDefault(); e.stopImmediatePropagation();
+  window.location.href = "../../";
+}, true);
+</script>
+</body>
 </html>

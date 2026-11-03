@@ -29,6 +29,10 @@
       "Transport",
       "Law"
     ],
+    "Accidents": [
+      "Health",
+      "Transport"
+    ],
     "Address": [
       "Personal Info"
     ],
@@ -82,6 +86,14 @@
     "Budgeting": [
       "Money"
     ],
+    "Buying a new car": [
+      "Transport",
+      "Money"
+    ],
+    "Buying a used car": [
+      "Transport",
+      "Money"
+    ],
     "Buying things": [
       "Shopping",
       "Money"
@@ -89,9 +101,23 @@
     "Calling about repairs": [
       "Housing"
     ],
+    "Car insurance": [
+      "Transport",
+      "Money"
+    ],
     "Change of address": [
       "Personal Info",
       "Housing"
+    ],
+    "Climate change": [
+      "Community"
+    ],
+    "Communication breakdown": [
+      "Study English",
+      "Community"
+    ],
+    "Community services": [
+      "Community"
     ],
     "Conversation skills": [
       "Study English",
@@ -107,6 +133,10 @@
     ],
     "Describing jobs": [
       "Work"
+    ],
+    "Destinations": [
+      "Leisure",
+      "Transport"
     ],
     "Directions": [
       "Transport",
@@ -126,13 +156,24 @@
     "Driving lessons": [
       "Transport"
     ],
+    "Eating out": [
+      "Leisure",
+      "Shopping"
+    ],
     "Emails and text messages": [
       "Community",
       "Study English"
     ],
+    "Emergencies": [
+      "Health",
+      "Community"
+    ],
     "Enrolling your child": [
       "Education",
       "Personal Info"
+    ],
+    "Entertainment": [
+      "Leisure"
     ],
     "Events": [
       "Leisure",
@@ -140,6 +181,13 @@
     ],
     "Exercise and wellbeing": [
       "Health"
+    ],
+    "Extracurricular activities": [
+      "Education",
+      "Leisure"
+    ],
+    "Extreme weather": [
+      "Community"
     ],
     "Finding a job": [
       "Work"
@@ -159,6 +207,12 @@
       "Personal Info",
       "Study English"
     ],
+    "General services": [
+      "Community"
+    ],
+    "Global challenges": [
+      "Community"
+    ],
     "Going out": [
       "Leisure",
       "Community"
@@ -177,6 +231,9 @@
     "Hello, what's your name": [
       "Personal Info"
     ],
+    "Holiday choices": [
+      "Leisure"
+    ],
     "Houses and flats": [
       "Housing"
     ],
@@ -190,8 +247,14 @@
     "How we get jobs": [
       "Work"
     ],
+    "Icons": [
+      "Community"
+    ],
     "Illness and medicine": [
       "Health"
+    ],
+    "Interview skills": [
+      "Work"
     ],
     "Invitations": [
       "Community",
@@ -210,8 +273,15 @@
       "Community",
       "Study English"
     ],
+    "Law and order": [
+      "Law"
+    ],
     "Law and you": [
       "Law"
+    ],
+    "Learning by distance": [
+      "Study English",
+      "Education"
     ],
     "Learning strategies": [
       "Study English"
@@ -219,9 +289,19 @@
     "Legal aid and courts": [
       "Law"
     ],
+    "Levels of government": [
+      "Law",
+      "Community"
+    ],
     "Likes and dislikes": [
       "Personal Info",
       "Leisure"
+    ],
+    "Loans": [
+      "Money"
+    ],
+    "Local challenges": [
+      "Community"
     ],
     "Looking for a place to live": [
       "Housing"
@@ -243,8 +323,29 @@
     "Medicine labels": [
       "Health"
     ],
+    "Meeting people": [
+      "Community",
+      "Personal Info"
+    ],
+    "Moving in": [
+      "Housing"
+    ],
+    "Moving out": [
+      "Housing"
+    ],
+    "National challenges": [
+      "Community"
+    ],
+    "Neighbourhood disputes": [
+      "Housing",
+      "Law",
+      "Community"
+    ],
     "Numbers and dates": [
       "Study English"
+    ],
+    "Parent involvement": [
+      "Education"
     ],
     "Parent teacher interviews": [
       "Education"
