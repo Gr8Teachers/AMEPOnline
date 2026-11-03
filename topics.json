@@ -196,6 +196,16 @@
     ],
     "Types of housing": [
       "Housing"
+    ],
+    "Weather forecasts": [
+      "Community"
+    ],
+    "What's on": [
+      "Leisure",
+      "Community"
+    ],
+    "Where do you come from": [
+      "Personal Info"
     ]
   }
 }
