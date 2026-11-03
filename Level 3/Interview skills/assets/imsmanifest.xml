@@ -1,0 +1,79 @@
+<?xml version="1.0" ?>
+<manifest identifier="A2saCY-nMDJywUKUUc_7JZdHXiUsWdma2v2jFAy-" version="1"
+  xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2"
+  xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd
+                      http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd
+                      http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <adlcp:location>metadata.xml</adlcp:location>
+  </metadata>
+  <organizations default="articulate_rise">
+      <organization identifier="articulate_rise">
+      <title>Interview skills</title>
+      <item identifier="i1" identifierref="r1" isvisible="true">
+        <title>Interview skills</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="r1" type="webcontent" adlcp:scormtype="sco" href="scormdriver/indexAPI.html">
+      <!-- SCORMDRIVER STUFF -->
+      <file href="scormdriver/indexAPI.html" />
+      <file href="scormdriver/AICCComm.html" />
+      <file href="scormdriver/auto-scripts/AutoBookmark.js" />
+      <file href="scormdriver/auto-scripts/AutoCompleteSCO.js" />
+      <file href="scormdriver/auto-scripts/CourseExit.js" />
+      <file href="scormdriver/blank.html" />
+      <file href="scormdriver/goodbye.html" />
+      <file href="scormdriver/scormdriver.js" />
+      <file href="scormdriver/browsersniff.js" />
+
+      <!-- RUNTIME COMMON STUFF -->
+      <file href="scormcontent/index.html" />
+      <file href="scormcontent/lib/main.bundle.js"/>
+
+      
+        <file href="scormcontent/lib/fonts/icomoon.ttf"/>
+        <file href="scormcontent/lib/fonts/icomoon.woff"/>
+
+        <file href="scormcontent/lib/icomoon.css"/>
+        <file href="scormcontent/lib/main.bundle.css"/>
+        <file href="scormcontent/lib/player-0.0.11.min.js"/>
+        <file href="scormcontent/lib/lzwcompress.js"/>
+      
+
+      <!-- RUNTIME CONTENT STUFF -->
+      <file href="scormcontent/lib/fonts/Roboto-Light.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Regular.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Bold.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Italic.woff" />
+<file href="scormcontent/lib/fonts/Roboto-Black.woff" />
+<file href="scormcontent/lib/fonts/Lato-Light.woff" />
+<file href="scormcontent/lib/fonts/Lato-Regular.woff" />
+<file href="scormcontent/lib/fonts/Lato-Bold.woff" />
+<file href="scormcontent/lib/fonts/Lato-Italic.woff" />
+<file href="scormcontent/lib/fonts/Lato-Black.woff" />
+<file href="scormcontent/assets/-JNmiqzrk5Jh9IaG_small.png" />
+<file href="scormcontent/assets/EyScQtDGL1TpbK0U_small.png" />
+<file href="scormcontent/assets/vdFs6KLMiL7sEucH_small.png" />
+<file href="scormcontent/assets/UTPqvh9_cis2VzoS_KjW6qxoVHUqsqmGz.jpg" />
+<file href="scormcontent/assets/tRjJ-UBee45tknW2_transcoded-HAm-Rd-E9HvOPcGx-3.mp3" />
+<file href="scormcontent/assets/8KddaiOB6pEg45LW_transcoded-2LISIE4DfifX9feJ-3.mp3" />
+<file href="scormcontent/assets/Pnfqp8Nj66BAH5b3_transcoded-0FebxUxo7cr2Baj9-3.mp3" />
+<file href="scormcontent/assets/c3YIUBlJbNDmN_0u_transcoded-VgySTnWwC2Naa3jF-3.mp3" />
+<file href="scormcontent/assets/LJPi864BvGr1to9f_transcoded-BBlZfHtGuWCzfqGj-3.mp3" />
+<file href="scormcontent/assets/XBrWorGsjZjaGqq6_transcoded-Fzt4Fx1HFfnAYhNQ-3.mp3" />
+<file href="scormcontent/assets/eEKspqQvuwCu_jZE_transcoded-EWMLwA2t0RNkXgmP-3.mp3" />
+<file href="scormcontent/assets/6II2rrXiAQoEfk21_transcoded-_E34RyTnFJP9UaXi-3.mp3" />
+<file href="scormcontent/assets/hXB2GVX17pEKt0s4_transcoded-ktoqIsJbMnwa5Qap-3.mp3" />
+<file href="scormcontent/assets/q4Vrsgsgnk5uO_dc_transcoded-HxxvDMdPrFcPveFY-3.mp3" />
+<file href="scormcontent/assets/gAJW89p8St4kjCSn_transcoded-pU3LV_HOLerfx2vb-3.mp3" />
+<file href="scormcontent/assets/bwOigPh_-GVv-Y9Y_transcoded-o3EgmNm4_Bu7mhk0-3.mp3" />
+
+    </resource>
+  </resources>
+</manifest>
