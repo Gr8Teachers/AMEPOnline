@@ -63,6 +63,9 @@
       var levels = {};
       data.tree.forEach(function (item) {
         var p = item.path.split("/");
+        if (item.type === "blob" && p.length === 2 && p[1].toLowerCase() === "index.html") {
+          levels[p[0]] = levels[p[0]] || [];
+        }
         if (item.type === "blob" && p.length === 3 && p[2].toLowerCase() === "index.html") {
           (levels[p[0]] = levels[p[0]] || []).push(p[1]);
         }
@@ -81,6 +84,11 @@
         if (thisLevel) h2.textContent = "Units";
         else h2.appendChild(el("a", { href: base }, level));
         sec.appendChild(h2);
+        if (!levels[level].length) {
+          sec.appendChild(el("p", { "class": "msg" }, "No units yet."));
+          list.appendChild(sec);
+          return;
+        }
         var ul = el("ul", {});
         levels[level].sort(collator.compare).forEach(function (unit) {
           var li = el("li", {});
