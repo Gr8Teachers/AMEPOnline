@@ -260,15 +260,28 @@
     "Places": [
       "Community"
     ],
+    "Places to shop": [
+      "Shopping"
+    ],
+    "Pollution": [
+      "Community"
+    ],
     "Practising English": [
       "Study English"
     ],
     "Preparing for school": [
       "Education"
     ],
+    "Real estate agents and inspections": [
+      "Housing"
+    ],
     "Recycling": [
       "Community",
       "Housing"
+    ],
+    "Repairs and tenants’ rights": [
+      "Housing",
+      "Law"
     ],
     "Road signs": [
       "Transport",
